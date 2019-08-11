@@ -1,4 +1,4 @@
-//! ttyecho is a crate that lets you write data a into Linux kernel pseudoterminal buffer.
+//! ttyecho is a crate that lets you write data into a Linux kernel pseudoterminal buffer.
 //! This crate will not work on a non-Linux platform.
 //! 
 //! # Example
