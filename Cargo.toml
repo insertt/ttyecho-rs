@@ -3,6 +3,8 @@ name = "ttyecho"
 version = "0.1.0"
 authors = ["insertt <inserttdev@gmail.com>"]
 description = "ttyecho is a crate that lets you write data a into Linux kernel pseudoterminal buffer."
+license = "MIT"
+repository = "https://github.com/insertt/ttyecho-rs"
 edition = "2018"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
