@@ -1,6 +1,6 @@
 [package]
 name = "ttyecho"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["insertt <inserttdev@gmail.com>"]
 description = "ttyecho is a crate that lets you write data a into Linux kernel pseudoterminal buffer."
 license = "MIT"
