@@ -15,7 +15,8 @@
 //!     ttyecho(tty, command, append_new_line);
 //! }
 //! ```
-
+//! 
+#![cfg(linux)]
 use libc::{ ioctl, open, close, TIOCSTI, O_RDWR };
 
 /// Appends given data into given pseudoterminal buffer by using [ioctl] syscall with [TIOCSTI] parameter.
@@ -25,11 +26,11 @@ pub fn ttyecho<S: Into<String>>(tty: S, data: S, new_line: bool) {
     let mut tty = tty.into();
     let mut command = data.into();
 
-    if tty.chars().last().unwrap() != '\0' {
+    if ! tty.ends_with('\0') {
         tty.push('\0');
     }
 
-    if new_line && command.chars().last().unwrap() != '\r' {
+    if new_line && ! command.ends_with('\0') {
         command.push('\r');
     }
 
